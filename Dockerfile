@@ -1,9 +1,6 @@
-FROM jfclere/tomcat10:latest
+FROM jfclere/tomcat10-builder:latest
 LABEL Description="Tomcat webapp image to use with the JWS operator"
 VOLUME /tmp
-
-RUN apt-get update
-RUN apt-get install -y git maven openjdk-11-jdk-headless
 
 RUN git clone https://github.com/jfclere/demo-webapp.git
 
